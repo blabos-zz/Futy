@@ -1,3 +1,10 @@
+var/*
+perltidy.LOG
+vendor/*
+local/*
+.project
+.DS_Store
+doc/*
 blib/
 .build/
 _build/
