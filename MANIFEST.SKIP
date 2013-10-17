@@ -1,0 +1,12 @@
+root/static/images/symbols/*
+root/static/images/cards/*
+root/static/images/arts/*
+root/static/images/thumbs/*
+.project
+.DS_Store
+^doc
+^vendor
+^local
+^var
+^logs
+perltidy.LOG
