@@ -1,4 +1,4 @@
-insert into seasons ( year ) values (2013);
+insert into seasons ( year, weeks ) values (2013, 6);
 
 insert into coaches ( name )
 values ('Jaime Miler'), ('Matedão'), ('Zenilton de Souza'), ('Sabino Loreti');
@@ -57,16 +57,16 @@ insert into players (name,club,pos,number,defense,pass,ability,shoot) values
 
 insert into standings (season, club) values (1, 1), (1, 2), (1, 3), (1, 4);
 
-insert into matches (week, home, away) values
-(1,1,3),
-(1,2,4),
-(2,1,4),
-(2,2,3),
-(3,2,1),
-(3,4,3),
-(4,3,1),
-(4,4,2),
-(5,4,1),
-(5,3,2),
-(6,1,2),
-(6,3,4);
+insert into matches (season, week, home, away) values
+(1,1,1,3),
+(1,1,2,4),
+(1,2,1,4),
+(1,2,2,3),
+(1,3,2,1),
+(1,3,4,3),
+(1,4,3,1),
+(1,4,4,2),
+(1,5,4,1),
+(1,5,3,2),
+(1,6,1,2),
+(1,6,3,4);

@@ -91,3 +91,9 @@ __PACKAGE__->belongs_to(
 );
 
 1;
+
+# ABSTRACT: Futy::Schema::Result::Standing
+
+=encoding utf8
+
+=cut

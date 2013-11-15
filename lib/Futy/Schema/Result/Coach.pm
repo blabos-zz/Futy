@@ -33,3 +33,9 @@ __PACKAGE__->has_many(
 );
 
 1;
+
+# ABSTRACT: Futy::Schema::Result::Coach
+
+=encoding utf8
+
+=cut

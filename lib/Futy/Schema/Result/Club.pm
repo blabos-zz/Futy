@@ -79,3 +79,9 @@ __PACKAGE__->has_many(
 );
 
 1;
+
+# ABSTRACT: Futy::Schema::Result::Club
+
+=encoding utf8
+
+=cut

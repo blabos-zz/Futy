@@ -14,6 +14,11 @@ __PACKAGE__->add_columns(
         is_auto_increment => 1,
         is_nullable       => 0,
     },
+    'season' => {
+        data_type      => 'integer',
+        is_foreign_key => 1,
+        is_nullable    => 0,
+    },
     'week' => {
         data_type   => 'integer',
         is_nullable => 0,
@@ -64,4 +69,21 @@ __PACKAGE__->belongs_to(
     },
 );
 
+__PACKAGE__->belongs_to(
+    'season',
+    'Futy::Schema::Result::Season',
+    { id => 'season' },
+    {
+        is_deferrable => 0,
+        on_delete     => 'NO ACTION',
+        on_update     => 'NO ACTION',
+    },
+);
+
 1;
+
+# ABSTRACT: Futy::Schema::Result::Match
+
+=encoding utf8
+
+=cut

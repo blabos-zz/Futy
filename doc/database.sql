@@ -1,7 +1,8 @@
 drop table if exists seasons;
 create table seasons (
     id          integer primary key autoincrement,
-    year        integer unique not null
+    year        integer unique not null,
+    weeks       integer not null
 );
 
 drop table if exists standings;
@@ -24,11 +25,13 @@ create table standings (
 drop table if exists matches;
 create table matches (
     id          integer primary key autoincrement,
+    season      integer not null,
     week        integer not null,
     home        integer not null,
     away        integer not null,
     home_goals  integer not null default 0,
     away_goals  integer not null default 0,
+    foreign key ( season ) references seasons ( id ),
     foreign key ( home ) references clubs ( id ),
     foreign key ( away ) references clubs ( id )
 );

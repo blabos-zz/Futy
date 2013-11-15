@@ -69,8 +69,7 @@ __PACKAGE__->add_columns(
 
 __PACKAGE__->set_primary_key('id');
 
-__PACKAGE__->add_unique_constraint(
-    'club_number_unique',
+__PACKAGE__->add_unique_constraint( 'club_number_unique',
     [ 'club', 'number' ],
 );
 
@@ -97,3 +96,9 @@ __PACKAGE__->belongs_to(
 );
 
 1;
+
+# ABSTRACT: Futy::Schema::Result::Player
+
+=encoding utf8
+
+=cut

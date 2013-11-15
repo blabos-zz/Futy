@@ -37,3 +37,9 @@ __PACKAGE__->has_many(
 );
 
 1;
+
+# ABSTRACT: Futy::Schema::Result::Position
+
+=encoding utf8
+
+=cut

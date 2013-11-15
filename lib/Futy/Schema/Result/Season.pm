@@ -18,11 +18,26 @@ __PACKAGE__->add_columns(
         data_type   => 'integer',
         is_nullable => 0,
     },
+    'weeks' => {
+        data_type   => 'integer',
+        is_nullable => 0,
+    },
 );
 
 __PACKAGE__->set_primary_key('id');
 
 __PACKAGE__->add_unique_constraint( 'year_unique', ['year'] );
+
+__PACKAGE__->has_many(
+    'matches',
+    'Futy::Schema::Result::Match',
+    { 'foreign.season' => 'self.id' },
+    {
+        cascade_copy   => 0,
+        cascade_delete => 0,
+
+    },
+);
 
 __PACKAGE__->has_many(
     'standings',
@@ -35,3 +50,9 @@ __PACKAGE__->has_many(
 );
 
 1;
+
+# ABSTRACT: Futy::Schema::Result::Season
+
+=encoding utf8
+
+=cut

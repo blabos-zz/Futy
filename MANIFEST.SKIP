@@ -4,7 +4,6 @@ root/static/images/arts/*
 root/static/images/thumbs/*
 .project
 .DS_Store
-^doc
 ^vendor
 ^local
 ^var
